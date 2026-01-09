@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-color: #000000;
+    color: #F4F4F4;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+}
+
+button {
+    font-size: 2.4rem;
+    background-color: transparent;
+    color: #F4F4F4;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 25px;
+    border: 2px solid #F4F4F4;
+
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #1f1f1f;
+    border-color: #cccccc;
+}
+
+footer {
+    font-size: 1.6rem;
+    padding-block: 40px;
+    text-align: center;
+}

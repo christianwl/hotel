@@ -1,0 +1,50 @@
+/* 1. Use um modelo de caixa mais intuitivo */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remova margens padrão de tudo */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Permita que porcentagens de altura funcionem no corpo e html */
+html, body {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+/* 4. Melhore a renderização do texto e suavidade das fontes */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif; /* Opcional: define uma base limpa */
+}
+
+/* 5. Melhore o comportamento de mídia (evita transbordamento) */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Remova estilos padrão de formulários e botões */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Evite que textos longos quebrem o layout */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Remova marcadores de lista (opcional, mas comum em resets) */
+ul, ol {
+  list-style: none;
+}
+
+/* 9. Remova sublinhados de links por padrão (opcional) */
+a {
+  text-decoration: none;
+  color: inherit;
+}

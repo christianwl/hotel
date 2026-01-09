@@ -36,7 +36,10 @@ Após baixar o projeto, você pode abri-lo com o Visual Studio Code para acessá
 
 Para abrir, basta clicar duas vezes no arquivo **index.html** que ele será aberto no seu navegador, e você poderá testar suas funcionalidades.
 
-# Time 🐻
+## Autor
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/113655013?v=4" width=115><br><sub>Christian Rui</sub>](https://github.com/Christian-Rui)|
-| :---: |
+<div>
+  <a href="https://github.com/christianwl">
+    <img src="https://contrib.rocks/image?repo=christianwl/hotel" alt="foto do(s) autor(es)"/>
+  </a>
+</div>
