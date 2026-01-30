@@ -1,4 +1,4 @@
-function iniciarLetoh() {
+export default function iniciarLetohAntigo() {
   var nomeHotel = "Letoh";
   var listaHospedes = [];
   var nomesHospedes = [];
@@ -544,7 +544,7 @@ function iniciarLetoh() {
             horario: horario,
             duracao: duracaoEvento,
           });
-        } else {
+        } else {  
           alert("Reserva não efetuada.");
         }
       }

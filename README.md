@@ -24,7 +24,7 @@ Em caso de informação inválida escreve na tela “Valor Inválido” e volte 
 
 ## 📁 Acesso ao projeto
 
-Você pode [baixar o arquivo zip](https://github.com/Christian-Rui/hotel/archive/refs/heads/main.zip)
+Você pode [baixar o arquivo zip](https://github.com/christianwl/hotel/archive/refs/heads/main.zip)
 
 ## 🛠️ Abrir e rodar o projeto
 
