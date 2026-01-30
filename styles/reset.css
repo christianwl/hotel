@@ -1,50 +1,102 @@
-/* 1. Use um modelo de caixa mais intuitivo */
-*, *::before, *::after {
+/* 1. Box model consistente (padrão moderno universal) */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-/* 2. Remova margens padrão de tudo */
-* {
+/* 2. Remoção cirúrgica de margens que afetam layout */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
-  padding: 0;
 }
 
-/* 3. Permita que porcentagens de altura funcionem no corpo e html */
-html, body {
-  height: 100%;
-  font-size: 62.5%;
-}
-
-/* 4. Melhore a renderização do texto e suavidade das fontes */
+/* 3. Altura base confiável para layouts */
+html,
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: sans-serif; /* Opcional: define uma base limpa */
+  height: 100%;
 }
 
-/* 5. Melhore o comportamento de mídia (evita transbordamento) */
-img, picture, video, canvas, svg {
+/* 4. Base global do documento */
+body {
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh; /* viewport dinâmica (mobile moderno) */
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* 5. Listas — reset apenas com intenção explícita */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 6. Mídia responsiva por padrão */
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
-/* 6. Remova estilos padrão de formulários e botões */
-input, button, textarea, select {
+/* 7. Formulários herdam tipografia */
+input,
+button,
+textarea,
+select {
   font: inherit;
-}
-
-/* 7. Evite que textos longos quebrem o layout */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-/* 8. Remova marcadores de lista (opcional, mas comum em resets) */
-ul, ol {
-  list-style: none;
-}
-
-/* 9. Remova sublinhados de links por padrão (opcional) */
-a {
-  text-decoration: none;
   color: inherit;
+}
+
+/* 8. Tabelas previsíveis */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 9. Quebra segura de texto */
+p,
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* 10. Foco visível e acessível */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* 11. Respeita usuários com redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 12. Root stacking context (SPA / React / Next / Vue) */
+#root,
+#__next {
+  isolation: isolate;
 }
